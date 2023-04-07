@@ -38,7 +38,9 @@ function createNewElem() {
 }
 
 input.addEventListener("keydown", function (event) {
-    if (event.key == "Enter") {
+    if(input.value == "" && event.key == "Enter"){
+        alert("Please write your task and then press enter")
+    }else if (event.key == "Enter") {
         createNewElem();
     }
 });
